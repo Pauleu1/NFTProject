@@ -1,0 +1,41 @@
+{
+  "name": "api.flow-blockchain-service",
+  "version": "1.0.0",
+  "description": "This is a Node.js backend service which handles events from the Flow Blockchain.",
+  "keywords": [
+    "service",
+    "flow",
+    "blockchain"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Klaidi Gorishti",
+    "email": "gorishtiklaidi@gmail.com",
+    "url": "https://www.fiverr.com/users/klaidigorishti"
+  },
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --trace-warnings -r dotenv/config src/index.js",
+    "watch": "nodemon --exec node -r dotenv/config -- src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --config prettier.config.js --write \"src/**/*.{ts,tsx}\"",
+    "serve": "node src/index.js"
+  },
+  "dependencies": {
+    "@onflow/fcl": "0.0.77",
+    "aws-sdk": "^2.1137.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fcl-kms-authorizer": "^0.0.13",
+    "mysql": "^2.18.1",
+    "pg": "^8.7.1",
+    "shortid": "^2.2.16",
+    "unique-names-generator": "^4.6.0"
+  },
+  "devDependencies": {
+    "dotenv": "^6.2.0",
+    "nodemon": "^2.0.14"
+  }
+}
